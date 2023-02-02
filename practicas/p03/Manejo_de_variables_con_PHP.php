@@ -62,5 +62,33 @@
             asignaciones<br>";
             echo "R: No hubo ningun cambio en los valores de las variasbles, porque cada variable es distinto";
     ?>
+
+<h2>Inciso 3</h2>
+    <p>Muestra el contenido de cada variable inmediatamente después de cada asignación,
+    verificar la evolución del tipo de estas variables (imprime todos los componentes de los
+    arreglo):</p>
+
+    <?php
+        $a = "PHP5";
+        echo "a = ".$a."<br>";
+
+        $z[] = &$a."<br>";
+        var_dump($z);
+
+        $b = " 5a version de PHP<br>";
+        echo "b = ".$b;
+
+        // $c = $b*10;
+        echo '$c = $b*10, NO se puede realizar la asiganacion de variable, por que no se multiplicar un string.';
+
+        $a .= $b;
+        echo "$a". 'la variable $a . duplica doble vez el valor de la variable $b <br>';
+
+        // $b *= $c;
+        echo 'la variable $b * no se le puede asignar el valor de $c por que un string no se pude multiplicar con un INT<br>';
+
+        $z[0] = "MySQL";
+        var_dump($z)."<br>";
+    ?>
 </body>
 </html>

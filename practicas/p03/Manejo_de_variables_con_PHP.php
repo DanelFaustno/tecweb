@@ -33,35 +33,35 @@
         echo '$house*5 es incorrecta, intenta hacer una multiplicacion con la variable.<br>';
     ?>
 
-    <h2>Inciso 2</h2>
-        <p>Proporcionar los valores de $a, $b, $c como sigue:</p>
-        <p>$a = "ManejadorSQL";</p>
-        <p>$b = 'MySQL';</p>
-        <p>$c = &$a;</p>
-        <?php
-            $a = "ManejadorSQL<br>";
-            $b = 'MySQL<br>';
-            $c = &$a;
-            
-            echo "a. Ahora muestra el contenido de cada variable:<br>";
-            echo "a = ".$a;
-            echo "b = ".$b;
-            echo "c = ".$c."<br>";
+<h2>Inciso 2</h2>
+    <p>Proporcionar los valores de $a, $b, $c como sigue:</p>
+    <p>$a = "ManejadorSQL";</p>
+    <p>$b = 'MySQL';</p>
+    <p>$c = &$a;</p>
+    <?php
+        $a = "ManejadorSQL<br>";
+        $b = 'MySQL<br>';
+        $c = &$a;
+        
+        echo "a. Ahora muestra el contenido de cada variable:<br>";
+        echo "a = ".$a;
+        echo "b = ".$b;
+        echo "c = ".$c."<br>";
 
-            echo "b. Agrega al código actual las siguientes asignaciones:<br>";
-            echo "a = PHP server”;<br>";
-            echo "b = &a;<br><br>";
-            $a = "PHP server<br>";
-            $b = &$a."<br>";
+        echo "b. Agrega al código actual las siguientes asignaciones:<br>";
+        echo "a = PHP server”;<br>";
+        echo "b = &a;<br><br>";
+        $a = "PHP server<br>";
+        $b = &$a."<br>";
 
-            echo "c. Vuelve a mostrar el contenido de cada uno:<br>";
-            echo "a = ".$a;
-            echo "b = ".$b."<br>";
+        echo "c. Vuelve a mostrar el contenido de cada uno:<br>";
+        echo "a = ".$a;
+        echo "b = ".$b."<br>";
 
-            echo "d. Describe en y muestra en la página obtenida qué ocurrió en el segundo bloque de
-            asignaciones<br>";
-            echo "R: No hubo ningun cambio en los valores de las variasbles, porque cada variable es distinto";
-    ?>
+        echo "d. Describe en y muestra en la página obtenida qué ocurrió en el segundo bloque de
+        asignaciones<br>";
+        echo "R: No hubo ningun cambio en los valores de las variasbles, porque cada variable es distinto";
+?>
 
 <h2>Inciso 3</h2>
     <p>Muestra el contenido de cada variable inmediatamente después de cada asignación,
@@ -114,9 +114,7 @@
         echo "el valor del array no se puede transformar a string";
         echo $j;
         echo $i;
-       
     ?>
-
 <h2>Inciso 5</h2>
     <p>Dar el valor de las variables $a, $b, $c al final del siguiente script:</p>
     <p>$a = “7 personas”;</p>
@@ -172,6 +170,21 @@
         echo 'Después investiga una función de PHP que permita transformar el valor booleano de $c y $e
         en uno que se pueda mostrar con un echo:';
 
+    ?>
+
+<h2>Inciso 7</h2>
+    <p>Usando la variable predefinida $_SERVER, determina lo siguiente:</p>
+    <p>a. La versión de Apache y PHP,</p>
+    <p>b. El nombre del sistema operativo (servidor),</P>
+    <p>c. El idioma del navegador (cliente).</P>
+    
+    <?php
+        $version = apache_get_version();
+        echo "<br>a) Versió de apache: $version"."<br>";
+        echo '<br>a) Versión actual de PHP: '.phpversion()."<br>";
+        echo "b) sistema operativo".php_uname()."<br>";
+        echo "c) Idioma: ".$idioma = $_SERVER['HTTP_ACCEPT_LANGUAGE'];
+        echo $idioma;
     ?>
 </body>
 </html>

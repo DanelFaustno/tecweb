@@ -32,5 +32,35 @@
         // $house*5 = "SEPTIMO";
         echo '$house*5 es incorrecta, intenta hacer una multiplicacion con la variable.<br>';
     ?>
+
+    <h2>Inciso 2</h2>
+        <p>Proporcionar los valores de $a, $b, $c como sigue:</p>
+        <p>$a = "ManejadorSQL";</p>
+        <p>$b = 'MySQL';</p>
+        <p>$c = &$a;</p>
+        <?php
+            $a = "ManejadorSQL<br>";
+            $b = 'MySQL<br>';
+            $c = &$a;
+            
+            echo "a. Ahora muestra el contenido de cada variable:<br>";
+            echo "a = ".$a;
+            echo "b = ".$b;
+            echo "c = ".$c."<br>";
+
+            echo "b. Agrega al código actual las siguientes asignaciones:<br>";
+            echo "a = PHP server”;<br>";
+            echo "b = &a;<br><br>";
+            $a = "PHP server<br>";
+            $b = &$a."<br>";
+
+            echo "c. Vuelve a mostrar el contenido de cada uno:<br>";
+            echo "a = ".$a;
+            echo "b = ".$b."<br>";
+
+            echo "d. Describe en y muestra en la página obtenida qué ocurrió en el segundo bloque de
+            asignaciones<br>";
+            echo "R: No hubo ningun cambio en los valores de las variasbles, porque cada variable es distinto";
+    ?>
 </body>
 </html>

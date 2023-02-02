@@ -116,5 +116,22 @@
         echo $i;
        
     ?>
+
+<h2>Inciso 5</h2>
+    <p>Dar el valor de las variables $a, $b, $c al final del siguiente script:</p>
+    <p>$a = “7 personas”;</p>
+    <p>$b = (integer) $a;</P>
+    <p>$a = “9E3”;</P>
+    <p>$c = (double) $a;</P>
+    <?php
+        $a = "7 personas";
+        $b = (integer) $a;
+        $a = "9E3";
+        $c = (double) $a;
+        echo "a = ".$a."<br>";
+        echo "b = ".$b."<br>";
+        echo "a = ".$a."<br>";
+        echo "c = ".$c."<br>";
+    ?>
 </body>
 </html>

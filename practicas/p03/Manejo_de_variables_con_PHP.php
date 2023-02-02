@@ -90,5 +90,31 @@
         $z[0] = "MySQL";
         var_dump($z)."<br>";
     ?>
+
+<h2>Inciso 4</h2>
+    <p>Lee y muestra los valores de las variables del ejercicio anterior, pero ahora con la ayuda de
+    la matriz $GLOBALS o del modificador global de PHP.</p>
+
+    <?php
+        $aa = "PHP5";
+        $z[0] = &$a."<br>";
+        $bb = " 5a version de PHP";
+        $aa.= $b;
+        $z[0] = "MySQL";
+
+        function valor()
+        {
+            $GLOBALS['n'] = $GLOBALS['aa']."<br>";
+            // $GLOBALS['j'] = $GLOBALS['zz'];
+            $GLOBALS['j'] = $GLOBALS['bb']."<br>";
+            $GLOBALS['i'] = $GLOBALS['aa']."<br>";
+        }
+        valor();
+        echo $n;
+        echo "el valor del array no se puede transformar a string";
+        echo $j;
+        echo $i;
+       
+    ?>
 </body>
 </html>

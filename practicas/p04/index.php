@@ -140,5 +140,258 @@
         </p>
         </form>
     </div>
+    
+    <div>
+        <h3>Ejercicio 6</h3>
+        <p>
+        Crea en código duro un arreglo asociativo que sirva para registrar el parque vehicular de
+        una ciudad. Cada vehículo debe ser identificado por:
+        </p>
+        <ul>
+            <li>Matricula.</li>
+            <li>Auto (Marca, Modelo, Tipo)</li>
+            <li>Propietario (Nombre, Ciudad, Dirección)</li>
+        </ul>
+        <p>
+        La matrícula debe tener el siguiente formato LLLNNNN, donde las L pueden ser letras de
+        la A-Z y las N pueden ser números de 0-9.
+        </br>
+        Usa print_r para mostrar la estructura general del arreglo.
+        </p>
+        <p>
+            R:
+            <?php
+            $parqueVehicular = array();
+
+            $parqueVehicular['ABC12345'] = array(
+                'Auto' => array(
+                    'Marca' => "Toyota",
+                    'Modelo'  => "Camry 2023",
+                    'Tipo'  => "SUV"
+                ),
+                'Propietario' => array(
+                    'Nombre' => "Juan Pérez",
+                    'Ciudad'  => "Puebla, Pue.",
+                    'Direccion'  => "Calle 123, Ciudad A,"
+                )
+            );
+            $parqueVehicular['DEF67890'] = array(
+                'Auto' => array(
+                    'Marca' => "Honda",
+                    'Modelo'  => "Civic 2023",
+                    'Tipo'  => "LWB"
+                ),
+                'Propietario' => array(
+                    'Nombre' => "María González",
+                    'Ciudad'  => "Puebla, Pue.",
+                    'Direccion'  => "Avenida 456."
+                )
+            );
+            $parqueVehicular['GHI23456'] = array(
+                'Auto' => array(
+                    'Marca' => "Ford",
+                    'Modelo'  => "Mustang",
+                    'Tipo'  => "Sedán"
+                ),
+                'Propietario' => array(
+                    'Nombre' => "Pedro Martínez.",
+                    'Ciudad'  => "Aguililla, Michoacan.",
+                    'Direccion'  => "Calle 789."
+                )
+            );
+            $parqueVehicular['JKL56789'] = array(
+                'Auto' => array(
+                    'Marca' => "Chevrolet ",
+                    'Modelo'  => "Camaro",
+                    'Tipo'  => "Sedán"
+                ),
+                'Propietario' => array(
+                    'Nombre' => "Ana Rodríguez",
+                    'Ciudad'  => "Jerusalen.",
+                    'Direccion'  => "Avenida 012"
+                )
+            );
+            $parqueVehicular['MNO34567'] = array(
+                'Auto' => array(
+                    'Marca' => "Nissan",
+                    'Modelo'  => "Altima",
+                    'Tipo'  => "Coupe"
+                ),
+                'Propietario' => array(
+                    'Nombre' => "Carlos Sánchez Juarez",
+                    'Ciudad'  => "Veracruz, Veracruz de Ignacio de la Llave.",
+                    'Direccion'  => "Calle 345"
+                )
+            );
+            $parqueVehicular['PQR89012'] = array(
+                'Auto' => array(
+                    'Marca' => "BMW",
+                    'Modelo'  => "3 Series",
+                    'Tipo'  => "Hatchback"
+                ),
+                'Propietario' => array(
+                    'Nombre' => "Isabel García Hernandez",
+                    'Ciudad'  => "Puebla, Puebla.",
+                    'Direccion'  => "Avenida 678"
+                )
+            );
+            $parqueVehicular['STU01234'] = array(
+                'Auto' => array(
+                    'Marca' => "Mercedes-Benz",
+                    'Modelo'  => "C-Class",
+                    'Tipo'  => "SUV"
+                ),
+                'Propietario' => array(
+                    'Nombre' => "José López",
+                    'Ciudad'  => "Monterrey, Nuevo Leon.",
+                    'Direccion'  => "Calle 901"
+                )
+            );
+            $parqueVehicular['UVW54321'] = array(
+                'Auto' => array(
+                    'Marca' => "Audi",
+                    'Modelo'  => "A4",
+                    'Tipo'  => "Coupe"
+                ),
+                'Propietario' => array(
+                    'Nombre' => "Alfredo Lagunas Ferral",
+                    'Ciudad'  => "Tlaxcala de Xicohténcatl, Tlaxcala.",
+                    'Direccion'  => "10756 Rohan Meadow."
+                )
+            );
+            $parqueVehicular['XYZ67890'] = array(
+                'Auto' => array(
+                    'Marca' => "Volkswagen",
+                    'Modelo'  => "Jetta",
+                    'Tipo'  => "SUV"
+                ),
+                'Propietario' => array(
+                    'Nombre' => "Rebeca Zenteno Martinez",
+                    'Ciudad'  => "Zacatecas, Zacatecas.",
+                    'Direccion'  => "7428 Barrows Row."
+                )
+            );
+            $parqueVehicular['JHI01278'] = array(
+                'Auto' => array(
+                    'Marca' => "Kia",
+                    'Modelo'  => "Optima",
+                    'Tipo'  => "Crossover SUV"
+                ),
+                'Propietario' => array(
+                    'Nombre' => "Valentin Elizalde",
+                    'Ciudad'  => "Navojoa, Sonora.",
+                    'Direccion'  => "03434 Gaylord Ridges."
+                )
+            );
+            $parqueVehicular['KLM23456'] = array(
+                'Auto' => array(
+                    'Marca' => "Maserati",
+                    'Modelo'  => "GranCabrio",
+                    'Tipo'  => "Descapotable"
+                ),
+                'Propietario' => array(
+                    'Nombre' => "OScar Diez Denche",
+                    'Ciudad'  => "Puerto Escondido, Oaxaca.",
+                    'Direccion'  => "91833 Romaguera Cliff."
+                )
+            );
+            $parqueVehicular['NOP56789'] = array(
+                'Auto' => array(
+                    'Marca' => "Hyundai",
+                    'Modelo'  => "Sonata",
+                    'Tipo'  => "Furgoneta"
+                ),
+                'Propietario' => array(
+                    'Nombre' => "Fernano Aguilar Anaya",
+                    'Ciudad'  => "Villahermosa, Tabasco.",
+                    'Direccion'  => "04447 Favian Dale."
+                )
+            );
+            $parqueVehicular['QRS34567'] = array(
+                'Auto' => array(
+                    'Marca' => "Mazda",
+                    'Modelo'  => "Mazda3",
+                    'Tipo'  => "Sedan"
+                ),
+                'Propietario' => array(
+                    'Nombre' => "MARtin Estrada Aguilar",
+                    'Ciudad'  => "Ciudad de Mexico.",
+                    'Direccion'  => "1349 Kamille Brook."
+                )
+            );
+            $parqueVehicular['TUV89012'] = array(
+                'Auto' => array(
+                    'Marca' => "BMW",
+                    'Modelo'  => "i8",
+                    'Tipo'  => "Coupe"
+                ),
+                'Propietario' => array(
+                    'Nombre' => "Julian Arenas Arroyo",
+                    'Ciudad'  => "San Jose Cabo, Baja California Sur.",
+                    'Direccion'  => "419 Christiansen River."
+                )
+            );
+            $parqueVehicular['WXY01234'] = array(
+                'Auto' => array(
+                    'Marca' => "Subaru",
+                    'Modelo'  => "Impreza",
+                    'Tipo'  => "Sedan"
+                ),
+                'Propietario' => array(
+                    'Nombre' => "Jesus Romero Miranda",
+                    'Ciudad'  => "Culiacan, Sinaloa.",
+                    'Direccion'  => "05484 Eleanora Place."
+                )
+            );
+            echo "<pre>";
+            print_r($parqueVehicular);
+            echo "</pre>";
+            ?>
+        </p>
+        <p>
+        Finalmente crea un formulario simple donde puedas consultar la información:
+        </p>
+        <ul>
+            <li>Por matricula de auto.</li>
+        </ul>
+        <p>
+            R:
+            <form id="formulario2" action="index.php" method="post">
+            <strong>Busqueda por matricula</strong>
+            <fieldset>
+                <legend>Ingrese la matricula a buscar</legend>
+                <ol>
+                <li><label>Matricula: </label> <input type="text" name="matricula"></li>
+                </ol>
+            </fieldset>
+            <p>
+                <input type="submit" value="Buscar">
+            </p>
+            </form>
+            <?php
+            
+
+            if (!empty($_POST['matricula'])){
+                $busqueda = $_POST['matricula'];
+                $fin = true;
+                foreach ($parqueVehicular as $key => $value) {
+                    if($busqueda == $key){
+                        echo "La matricula <strong> $key </strong> contiene los datos:";
+                        echo "<pre>";
+                        print_r($value);
+                        echo "</pre>";
+                        $fin = true;
+                        break;
+                    }else{
+                        $fin = false;
+                    }
+                }
+                if($fin == false){
+                    echo "La matricula <strong> $busqueda </strong> NO se encuentra en el array";
+                }
+            }
+            ?>
+        </p>
+    </div>
 </body>
 </html>

@@ -31,5 +31,19 @@
         </p>
     </div>
     <hr>
+    <div>
+        <h3>Ejercicio 2</h3>
+        <p>
+            Crea un programa para la generación repetitiva de 3 números aleatorios hasta obtener una secuencia compuesta por:
+            <br><strong>impar, par, impar</strong>
+        </p>
+        <p>
+            R:
+            <?php
+            $ejercicio2 = matriz(1,3,100,900);
+            ?>
+        </p>
+    </div>
+ 
 </body>
 </html>

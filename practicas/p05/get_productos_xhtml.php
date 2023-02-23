@@ -2,8 +2,8 @@
 "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es">
 <?php
-    header("Content-Type: application/json; charset=utf-8"); 
-    $data = array();
+    // header("Content-Type: application/json; charset=utf-8");
+    // $data = array();
 
 	if(isset($_GET['tope']))
     {
@@ -21,14 +21,14 @@
         /** NOTA: con @ se suprime el Warning para gestionar el error por medio de código */
 
 		/** comprobar la conexión */
-		if ($link->connect_errno) 
+		if ($link->connect_errno)
 		{
 			die('Falló la conexión: '.$link->connect_error.'<br/>');
 			//exit();
 		}
 
 		/** Crear una tabla que no devuelve un conjunto de resultados */
-		if ( $result = $link->query("SELECT * FROM productos WHERE unidades <= $tope") ) 
+		if ( $result = $link->query("SELECT * FROM productos WHERE unidades <= $tope") )
 		{
             /** Se extraen las tuplas obtenidas de la consulta */
 			$row = $result->fetch_all(MYSQLI_ASSOC);
@@ -47,7 +47,7 @@
 		$link->close();
 
         /** Se devuelven los datos en formato JSON */
-        echo json_encode($data, JSON_PRETTY_PRINT);
+        // echo json_encode($data, JSON_PRETTY_PRINT);
 	}
 	?>
 	<head>
@@ -59,7 +59,7 @@
 		<h3>PRODUCTO</h3>
 
 		<br/>
-		
+
 		<?php if( isset($row) ) : ?>
 
 			<table class="table">
@@ -80,18 +80,18 @@
 
 				foreach($data as $key => $value){
 					echo '<tr>';
-					echo '<th>' . $value[id] . '</th>';
-					echo '<td>' . $value[nombre] . ' </td>';
-					echo '<td>' . $value[marca] . ' </td>';
-					echo '<td>' . $value[modelo] . ' </td>';
-					echo '<td>' . $value[precio] . ' </td>';
-					echo '<td>' . $value[unidades] . ' </td>';
-					echo '<td>' . $value[detalles] . ' </td>';
+					echo '<th scope=value>' . $value["id"] . '</th>';
+					echo '<td>' . $value["nombre"] . ' </td>';
+					echo '<td>' . $value["marca"] . ' </td>';
+					echo '<td>' . $value["modelo"] . ' </td>';
+					echo '<td>' . $value["precio"] . ' </td>';
+					echo '<td>' . $value["unidades"] . ' </td>';
+					echo '<td>' . $value["detalles"] . ' </td>';
 					echo '<td>' . "<img width= 100 height= 126 src= $value[imagen] >" . '</td>';
 					echo "</tr>";
 				}
 
-            
+
                 ?>
 				</tbody>
 			</table>

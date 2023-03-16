@@ -34,11 +34,11 @@
 
 	<?php
 
-	if(isset($_GET['data'])){
-		$tope = $_GET['data'];
+	if(isset($_GET['tope'])){
+		$tope = $_GET['tope'];
     }
     else{
-        die('Parámetro "data" no detectado...');
+        die('Parámetro "tope" no detectado...');
     }
 
 	if (!empty($tope)){
@@ -47,14 +47,13 @@
 		if ($link->connect_errno){
 			die('Falló la conexión: '.$link->connect_error.'<br/>');
 		}
-
 		if ( $result = $link->query("SELECT * FROM productos WHERE unidades <= $tope")){
 			$row = $result->fetch_all(MYSQLI_ASSOC);
 
 			$result->free();
 
-            foreach($row as $num => $registro) {           
-                foreach($registro as $key => $value) {     
+            foreach($row as $num => $registro) {         
+                foreach($registro as $key => $value) {      
                     $data[$num][$key] = utf8_encode($value);
                 }
             }
@@ -74,15 +73,15 @@
 			<table class="table">
 				<thead class="thead-dark">
 					<tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">Marca</th>
-                        <th scope="col">Modelo</th>
-                        <th scope="col">Precio</th>
-                        <th scope="col">Unidades</th>
-                        <th scope="col">Detalles</th>
-                        <th scope="col">Imagen</th>
-                        <th scope="col">Modificar</th>
+					<th scope="col">#</th>
+					<th scope="col">Nombre</th>
+					<th scope="col">Marca</th>
+					<th scope="col">Modelo</th>
+					<th scope="col">Precio</th>
+					<th scope="col">Unidades</th>
+					<th scope="col">Detalles</th>
+					<th scope="col">Imagen</th>
+					<th scope="col">Modificar</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -90,13 +89,13 @@
                 
                     	foreach($data as $key => $value){
 					    	echo "<tr id= $value[id]>";
-							echo '<th scope=value class= row-data>' . $value[id] . '</th>';
-							echo '<td class= row-data>' . $value[nombre] . ' </td>';
-                     		echo '<td class= row-data>' . $value[marca] . ' </td>';
-                        	echo '<td class= row-data>' . $value[modelo] . ' </td>';
-                        	echo '<td class= row-data>' . $value[precio] . ' </td>';
-                        	echo '<td class= row-data>' . $value[unidades] . ' </td>';
-                        	echo '<td class= row-data>' . $value[detalles] . ' </td>';
+							echo '<th scope=value class= row-data>' . $value["id"] . '</th>';
+							echo '<td class= row-data>' . $value["nombre"] . ' </td>';
+                     		echo '<td class= row-data>' . $value["marca"] . ' </td>';
+                        	echo '<td class= row-data>' . $value["modelo"] . ' </td>';
+                        	echo '<td class= row-data>' . $value["precio"] . ' </td>';
+                        	echo '<td class= row-data>' . $value["unidades"] . ' </td>';
+                        	echo '<td class= row-data>' . $value["detalles"] . ' </td>';
 							echo '<td class= row-data>' . "<img width= 100 height= 126 src= $value[imagen] >" . '</td>';
 							echo '<td>' . "<input type= button value= Modificar onclick= show() </input>" . '</td>';
 					    	echo "</tr>";

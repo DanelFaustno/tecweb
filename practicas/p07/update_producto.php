@@ -38,7 +38,7 @@
             $sqlUpdate = "UPDATE productos SET nombre='$nombre', marca='$marca', modelo='$modelo', precio='$precio', detalles='$detalles', unidades='$unidades', imagen='$imagen' WHERE id='$id'";
 
                 if($link->query($sqlUpdate)){
-                    echo "<h1>Se ha actualizado correctamente el peluche con ID: $id</h1>";
+                    echo "<h1>Se ha actualizado correctamente el producto con ID: $id</h1>";
                     echo "<h3>Nuevos Datos:</h3>";
                     echo 'Nombre: '.$nombre;
                     echo "</br>";

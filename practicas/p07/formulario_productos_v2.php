@@ -11,7 +11,7 @@
 
         <p>validar todos los datos correctamente</p>
 
-        <form id="formularioProductos" onsubmit="return validar()" action="http://localhost/tecnologiasweb/practicas/p06/set_producto_v2.php" method="post">
+        <form id="formularioProductos" onsubmit="return validar()" action="http://localhost/tecnologiasweb/practicas/p07/set_producto_v2.php" method="post">
 
             <fieldset>
                 <legend>Nuevo Producto</legend>
@@ -53,8 +53,6 @@
             var unidades = document.getElementById("form-unit").value;
             var imagen = document.getElementById("form-image").value;
 
-            
-            
             var regexName = /^[a-zA-Z0-9ñ ]+$/;
             var regexModel = /^[-a-zA-Z0-9 ]+$/;
             var regexPrice = /^[0-9.,]+$/;
@@ -139,7 +137,7 @@
 
         <p>Captura todos los datos correctamente</p>
 
-        <form id="formularioModProductos" onsubmit="return validar2()" action="http://localhost/tecnologiasWeb/practicas/p07/set_producto_v2.php" method="post">
+        <form id="formularioModProductos" onsubmit="return validar2()" action="http://localhost/tecnologiasweb/practicas/p07/update_producto.php" method="post">
 
             <fieldset>
                 <legend>PC´s o laptop Existente</legend>
@@ -152,7 +150,7 @@
                             <li><label>ACER<input type="radio" id="form-marca_2" name="form-marca_2" value="ACER"></input></label></li>
                             <li><label>LENOVO<input type="radio" id="form-marca_2" name="form-marca_2" value="LENOVO"></input></label></li>
                             <li><label>APPLE<input type="radio" id="form-marca_2" name="form-marca_2" value="APPLE"></input></label></li>
-                            <li><label>ASUS<input type="radio" id="form-marca_" name="form-marca_2" value="ASUS"></input></label></li></br>
+                            <li><label>ASUS<input type="radio" id="form-marca_2" name="form-marca_2" value="ASUS"></input></label></li></br>
                         </ul>
                     </li>
                     <li><label>Modelo: <input type="text" id="form-model2" name="form-model2" value="<?=$_POST['model-form']?>"></input></label></li></br>
@@ -191,8 +189,6 @@
             var detalles = document.getElementById("form-detail2").value;
             var unidades = document.getElementById("form-unit2").value;
             var imagen = document.getElementById("form-image2").value;
-
-            
             
             var regexName = /^[a-zA-Z0-9ñ ]+$/;
             var regexModel = /^[-a-zA-Z0-9 ]+$/;

@@ -83,13 +83,13 @@
                 
                     	foreach($data as $key => $value){
 					    	echo "<tr id= $value[id]>";
-							echo '<th scope=value class= row-data>' . $value[id] . '</th>';
-							echo '<td class= row-data>' . $value[nombre] . ' </td>';
-                     		echo '<td class= row-data>' . $value[marca] . ' </td>';
-                        	echo '<td class= row-data>' . $value[modelo] . ' </td>';
-                        	echo '<td class= row-data>' . $value[precio] . ' </td>';
-                        	echo '<td class= row-data>' . $value[unidades] . ' </td>';
-                        	echo '<td class= row-data>' . $value[detalles] . ' </td>';
+							echo '<th scope=value class= row-data>' . $value["id"] . '</th>';
+							echo '<td class= row-data>' . $value["nombre"] . ' </td>';
+                     		echo '<td class= row-data>' . $value["marca"] . ' </td>';
+                        	echo '<td class= row-data>' . $value["modelo"] . ' </td>';
+                        	echo '<td class= row-data>' . $value["precio"] . ' </td>';
+                        	echo '<td class= row-data>' . $value["unidades"] . ' </td>';
+                        	echo '<td class= row-data>' . $value["detalles"] . ' </td>';
 							echo '<td class= row-data>' . "<img width= 100 height= 126 src= $value[imagen] >" . '</td>';
 							echo '<td>' . "<input type= button value= Modificar onclick= show() </input>" . '</td>';
 					    	echo "</tr>";
